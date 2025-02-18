@@ -31,6 +31,12 @@ body nav .navbar-nav a {
 body nav .navbar-nav a:hover {
   color: #ff8013 !important;
 }
+.hero-title{ 
+  color: #FF6600;
+}
+.hero-span{
+  color: white;
+}
 body nav .navbar-nav .btn-danger {
   background: #ff8013;
   border-color: #ff8013;
@@ -178,7 +184,7 @@ a, a:hover {
   position: relative;
   padding: 50px 0;
   margin: 70px 0;
-  background: url("../images/gym2.jpg");
+  background: url("../images/background-steel.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-color: #000;
@@ -349,6 +355,84 @@ footer::before {
   left: 0;
 }
 
+
+/* Yangi qoshilganlar */
+
+/* Background image styling */
+.bg-img {
+  width: 100%;
+  height: 90vh;
+  background: url('../images/main3.webp') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Overlay effect for better readability */
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Banner text styling */
+.banner-text {
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 1;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.banner-text h2 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.banner-text span {
+  font-size: 24px;
+}
+
+/* Button styling */
+.btn-custom {
+  border: 2px solid #ff6600;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 12px 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  transition: 0.3s;
+}
+
+.btn-custom:hover {
+  background: #ff6600;
+  color: white;
+}
+
+/* Navbar Styling */
+.navbar {
+  background: transparent;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+.navbar .nav-link {
+  color: white !important;
+}
+
+.navbar-brand img {
+  max-height: 100px;
+}
+
+
+
+
 @media (max-width: 1199px) {
   .fh5co-content-box .pr-0 img {
     margin-top: -107px;
@@ -394,3 +478,154 @@ footer::before {
     margin-top: 0 !important;
   }
 }
+
+
+
+/* Animation classes */
+@keyframes fadeInDown {
+  from {
+      opacity: 0;
+      transform: translateY(-50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+      opacity: 0;
+      transform: translateX(-50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+      opacity: 0;
+      transform: translateX(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* Applying animations */
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.hero-title {
+  animation: fadeInDown 1.2s ease-out;
+}
+
+.hero-span {
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.btn-custom {
+  animation-duration: 1.5s;
+}
+
+.btn-custom.animated.fadeInLeft {
+  animation: fadeInLeft 1.5s ease-out;
+}
+
+.btn-custom.animated.fadeInRight {
+  animation: fadeInRight 1.5s ease-out;
+}
+
+
+
+/* Header colour change  */
+
+/* Navbar background */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.8) !important; /* Qoramtir yarim shaffof fon */
+  padding: 15px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Navbar scrolling effekti */
+.navbar.fixed-top {
+  background-color: rgba(0, 0, 0, 1) !important; /* Skroll bo‘lganda to‘liq qora */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Navbar matn ranglari */
+.navbar .nav-link {
+  color: white !important;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.navbar .nav-link:hover {
+  color: #ff6600 !important; /* Orange rang hover effekti */
+}
+
+/* Logo uchun stil */
+.navbar-brand img {
+  max-height: 80px;
+  transition: max-height 0.3s;
+}
+
+/* Header styling */
+.bg-img {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  background: url('../images/main3.webp') no-repeat center center/cover;
+}
+
+/* Header overlay uchun */
+.bg-overlay {
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay matnni aniq ko‘rsatish uchun */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Yandex Maps location  */
+
+/* Yandex Map Section */
+.map-section {
+  padding: 50px 0;
+  background-color: #f8f9fa; /* Light background */
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.map-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
